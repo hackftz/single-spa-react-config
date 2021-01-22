@@ -1,7 +1,4 @@
-import './App.css';
-import SideMenu from './components/sidemenu';
-import TopNav from './components/topnav';
-import Container from './components/container';
+import './App.less';
 import Dashboard from './components/dashboard';
 
 function App() {
