@@ -12,17 +12,18 @@ function Dashboard() {
   useEffect(() => {
     // Update the document title using the browser API
     start();
+    console.log('Dashboard');
   }, []);
 
   return (
     <Layout className={styles.layout}>
       <Header className="header">
         <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1">nav 1</Menu.Item>
           <Menu.Item key="2">nav 2</Menu.Item>
           <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
+        </Menu> */}
       </Header>
       <Layout>
         <Sider width={200} className="site-layout-background">
