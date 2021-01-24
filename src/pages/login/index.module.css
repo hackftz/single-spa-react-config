@@ -1,0 +1,13 @@
+.login {
+  height: 100vh;
+  background-color: rgba(99, 69, 187, 0.85);
+}
+
+.left {
+}
+
+.right {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}

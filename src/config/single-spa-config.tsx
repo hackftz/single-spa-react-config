@@ -1,4 +1,5 @@
-import { registerApplication, start } from 'single-spa';
+import { registerApplication } from 'single-spa';
+// import { registerApplication, start } from 'single-spa';
 
 registerApplication(
   'react-app',

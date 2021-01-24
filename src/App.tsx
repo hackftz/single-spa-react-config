@@ -1,10 +1,19 @@
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import { store, persistor } from './store';
+
+import Routes from './routes';
 import './App.less';
-import Dashboard from './components/dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Routes />
+        </PersistGate>
+      </Provider>
     </div>
   );
 }
