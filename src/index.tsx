@@ -7,9 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import './config/single-spa-config';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
