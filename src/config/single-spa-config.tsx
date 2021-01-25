@@ -8,4 +8,11 @@ registerApplication(
   { some: 'value' }
 );
 
+registerApplication(
+  'react-func-virtualized',
+  () => import('/Users/fanta/Desktop/projects/func-virtualized/single-spa-root'),
+  location => location.pathname.startsWith('/react-func-virtualized'),
+  { some: 'value' }
+);
+
 // start();
