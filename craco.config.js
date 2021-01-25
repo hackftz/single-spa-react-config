@@ -1,4 +1,5 @@
 const CracoLessPlugin = require('craco-less');
+const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 
 module.exports = {
   plugins: [
@@ -14,6 +15,26 @@ module.exports = {
           },
         },
       },
+    },
+    {
+      plugin: {
+        overrideCracoConfig: ({ cracoConfig, pluginOptions, context: { env, paths } }) => {
+          return cracoConfig;
+        },
+        overrideWebpackConfig: ({ webpackConfig, cracoConfig, pluginOptions, context: { env, paths } }) => {
+          webpackConfig.resolve.plugins = webpackConfig.resolve.plugins.filter(p => p.constructor.name !== 'ModuleScopePlugin');
+
+          // throw new Error('error');
+          return webpackConfig;
+        },
+        overrideDevServerConfig: ({ devServerConfig, cracoConfig, pluginOptions, context: { env, paths, proxy, allowedHost } }) => {
+          return devServerConfig;
+        },
+        overrideJestConfig: ({ jestConfig, cracoConfig, pluginOptions, context: { env, paths, resolve, rootDir } }) => {
+          return jestConfig;
+        },
+      },
+      options: {},
     },
   ],
 };
