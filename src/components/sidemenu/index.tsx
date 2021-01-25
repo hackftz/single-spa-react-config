@@ -12,7 +12,7 @@ function SideMenu() {
   const menuItemClick = (menuItemInfo: any) => {
     const { item, key, keyPath } = menuItemInfo;
     console.log(item, key, keyPath);
-    history.push('/react-app');
+    history.push('/react-func-virtualized');
   };
 
   return (
