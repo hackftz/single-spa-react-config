@@ -2,6 +2,17 @@ const CracoLessPlugin = require('craco-less');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 
 module.exports = {
+  babel: {
+    presets: ['@babel/preset-react'],
+    plugins: ['@babel/plugin-syntax-jsx'],
+    loaderOptions: {
+      /* Any babel-loader configuration options: https://github.com/babel/babel-loader. */
+    },
+    loaderOptions: (babelLoaderOptions, { env, paths }) => {
+      return babelLoaderOptions;
+    },
+  },
+
   plugins: [
     {
       plugin: CracoLessPlugin,

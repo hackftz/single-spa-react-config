@@ -1,6 +1,7 @@
+import React, { useEffect } from 'react';
+
 import { Layout } from 'antd';
 import styles from './index.module.css';
-import React, { useEffect } from 'react';
 
 import { start } from 'single-spa';
 
