@@ -5,9 +5,6 @@ module.exports = {
   babel: {
     presets: ['@babel/preset-react'],
     plugins: ['@babel/plugin-syntax-jsx'],
-    loaderOptions: {
-      /* Any babel-loader configuration options: https://github.com/babel/babel-loader. */
-    },
     loaderOptions: (babelLoaderOptions, { env, paths }) => {
       return babelLoaderOptions;
     },
@@ -33,6 +30,7 @@ module.exports = {
           return cracoConfig;
         },
         overrideWebpackConfig: ({ webpackConfig, cracoConfig, pluginOptions, context: { env, paths } }) => {
+          console.log('🚀 ~ file: craco.config.js ~ line 38 ~ webpackConfig', webpackConfig);
           webpackConfig.resolve.plugins = webpackConfig.resolve.plugins.filter(p => p.constructor.name !== 'ModuleScopePlugin');
 
           // throw new Error('error');

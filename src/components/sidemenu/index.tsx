@@ -30,6 +30,11 @@ function SideMenu() {
           title: 'react-func-virtualized',
           to: '/react-func-virtualized',
         },
+        {
+          key: '1-3',
+          title: 'react-ts-test',
+          to: '/react-ts-test',
+        },
       ],
     },
   ];
